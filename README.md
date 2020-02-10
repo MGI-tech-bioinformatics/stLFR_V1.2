@@ -26,11 +26,22 @@ Download/Install
 ----------------
 Due to the size limitation of GitHub repository, followed softwares need to be installed to the specific directory (stLFR_v2.1/tools):
 
-1. HapCUT2-master; 2. R-3.5.2; 3. bam2depth; 4. cnv; 5. gatk-4.0.3.0;
-
-6. jre1.8.0_101; 7. python3; 8. vcftools; 9. Python-2.7.14; 10. SOAPnuke-1.5.6; 
-
-11. bwa; 12. fqcheck; 13. gnuplot-5.2.2; 14. picard; 15.samtools-1.3; 16. SV2.1.
+1. HapCUT2-master; 
+2. R-3.5.2; 
+3. bam2depth; 
+4. cnv; 
+5. gatk-4.0.3.0;
+6. jre1.8.0_101; 
+7. python3; 
+8. vcftools; 
+9. Python-2.7.14; 
+10. SOAPnuke-1.5.6; 
+11. bwa; 
+12. fqcheck; 
+13. gnuplot-5.2.2; 
+14. picard; 
+15.samtools-1.3; 
+16. SV2.1.
 
 Furthermore, you need to download the following database listed in "db/db.list" from BGI Cloud Drive:
 
@@ -49,7 +60,7 @@ Usage
 
 2. Run the automatical delivery script. Default reference: [hs37d5]
 
-   perl stLFR <sample.list> [options]
+   perl bin/stLFR_SGE <sample.list> [options]
 
 Main progarm arguments:
 ----------
