@@ -40,7 +40,7 @@ Due to the size limitation of GitHub repository, followed softwares need to be i
 12. fqcheck; 
 13. gnuplot-5.2.2; 
 14. picard; 
-15.samtools-1.3; 
+15. samtools-1.3; 
 16. SV2.1.
 
 Furthermore, you need to download the following database listed in "db/db.list" from BGI Cloud Drive:
