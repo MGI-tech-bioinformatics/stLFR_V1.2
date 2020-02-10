@@ -1,0 +1,66 @@
+# queue
+defqid  1q
+defq    INPUT_PARAMETER_queue
+
+boltqid 2q
+boltq   fpga.q
+
+# 1 Filter
+# 11 samplebarcodemerge
+# 12 stLFRbarcodesplit
+# 13 lowqualityfilter
+# 14 fastqstat : 141 + 142
+s11mem  1
+s11cpu  1
+
+s12mem  4
+s12cpu  1
+
+s13mem  4
+s13cpu  4
+
+s141mem 1
+s141cpu 1
+s142mem 1
+s142cpu 1
+
+# 2 Align
+# 21 align : bwa / MegaBOLT
+# 22 bam split
+# 23 alignstat: 231 + 232
+bwamem  10
+bwacpu  10
+
+boltmem 100
+boltcpu 72
+
+s22mem  1
+s22cpu  6
+
+s231mem 8
+s231cpu 1
+s232mem 1
+s232cpu 1
+
+# 3 Phase
+# 31 split bam / vcf
+# 32 phase + stat
+
+s31mem  1
+s31cpu  6
+s321mem  10
+s321cpu  1
+s322mem 1
+s322cpu 1
+
+# 4 CNVSV
+# 41 cnv/sv call
+
+s41mem  45
+s41cpu  15
+
+# 5 Report
+# 51 html 
+
+s51mem  1
+s51cpu  1

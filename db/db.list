@@ -1,0 +1,32 @@
+hs37d5.fa          reference/hs37d5/hs37d5.fa
+hs37d5.sdf         reference/hs37d5/hs37d5.SDF
+hs37d5.chrom.size  reference/hs37d5/hs37d5.chrom.sizes
+hs37d5.non         reference/hs37d5/hs37d5.nonN.region
+hs37d5.dbsnp       gatk/dbsnp_138.hs37d5.vcf.gz
+hs37d5.pvcf        phasedvcf/hs37d5
+hs37d5.1kgindel    gatk/1000G_phase1.indels.hs37d5.vcf.gz
+hs37d5.1kgmills    gatk/Mills_and_1000G_gold_standard.indels.hs37d5.vcf.gz
+hs37d5.hapmap      gatk/hapmap_3.3.hs37d5.vcf.gz
+hs37d5.omni        gatk/1000G_omni2.5.hs37d5.vcf.gz
+hs37d5.1kgsnp      gatk/1000G_phase1.snps.high_confidence.hs37d5.vcf.gz
+hs37d5.snp         gatk/dbsnp_138.hs37d5.vcf.gz
+hs37d5.baseline    NA12878/baseline.hs37d5.vcf.gz
+hs37d5.confbed     NA12878/highconf.hs37d5.bed
+
+hg19.fa            reference/hg19/hg19.fa
+hg19.sdf           reference/hg19/hg19.SDF
+hg19.chrom.size    reference/hg19/hg19.chrom.sizes
+hg19.non           reference/hg19/hg19.nonN.region
+hg19.dbsnp         gatk/dbsnp_138.hg19.vcf.gz
+hg19.pvcf          phasedvcf/hg19
+hg19.1kgindel      gatk/1000G_phase1.indels.hg19.vcf.gz
+hg19.1kgmills      gatk/Mills_and_1000G_gold_standard.indels.hg19.vcf.gz
+hg19.hapmap        gatk/hapmap_3.3.hg19.vcf.gz
+hg19.omni          gatk/1000G_omni2.5.hg19.vcf.gz
+hg19.1kgsnp        gatk/1000G_phase1.snps.high_confidence.hg19.vcf.gz
+hg19.snp           gatk/dbsnp_138.hg19.vcf.gz
+hg19.baseline      NA12878/baseline.hg19.vcf.gz
+hg19.confbed       NA12878/highconf.hg19.bed
+
+barcodelist        barcode/barcode.list
+
