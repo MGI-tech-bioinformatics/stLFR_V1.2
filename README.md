@@ -171,23 +171,27 @@ Result
 -------
 After all analysis processes ending, you will get these files below:
 
-1. Raw data and alignment summary: Alignment.statistics.xls 
-2. Variant summary: Variant.statistics.xls 
-3. GCbias figure: GCbias.pdf 
-4. Insertsize figure: Insertsize.pdf 
-5. Depth distribution figure: Sequencing.depthSequencing.depth.pdf 
-6. Depth accumulation figure: Sequencing.depth.accumulation.pdf          
-7. GCbias metrics: *.gcbias_metrics.txt，*.gcbias_summary_metrics.txt
-8. Insertsize metrics: *.insertsize_metrics.txt
-9. Phasing statistics only by SNP: Phasingcount.*.hapcut2.xls (compare with GIAB vcf)
-10. Phasing statistics by SNP and InDel: Phasingcount.*.hapcut2_SNP+InDel.xls (compare with GIAB vcf)
-11. Fragment coverage figure: *.frag_cov.pdf
-12. Fragment length distribution figure: *.fraglen_distribution_min5000.pdf
-13. Fragment per barcode distribution figure: *.frag_per_barcode.pdf
+1.  HTML report:                              *_cn.html, *_en.html
+2.  raw data summary:                         *.fastqtable.xls
+3.  stLFR barcode summary:                    *.fragtable.xls
+4.  alignment summary:                        *.aligntable.xls
+5.  variant summary:                          *.varianttable.xls
+6.  haplotype phasing summary:                *.haplotype.xls, *.haplotype.pdf
+7.  evaluation summary (NA12878):             *.evaluation.xls
+8.  quality distrubution in cleanfq:          *.Cleanfq.qual.png
+9.  base distribution in cleanfq:             *.Cleanfq.base.png
+10. depth distribution in alignment:          *.Sequencing.depth.pdf
+11. accumulated depth distribution:           *.Sequencing.depth.accumulation.pdf
+12. insert size distrubition:                 *.Insertsize.metrics.txt, *.Insertsize.pdf
+13. GC bias distrubution:                     *.GCbias.metrics.txt, *.GCbias.pdf
+14. Fragment coverage figure:                 *.frag_cov.pdf
+15. Fragment length distribution figure:      *.fraglen_distribution_min5000.pdf
+16. Fragment per barcode distribution figure: *.frag_per_barcode.pdf
+17. variant CIRCOS:                           *.circos.svg, *.circos.png, *.legend_circos.pdf
 
 Additional Information
 -------
-1. If user has "Permission denied" problem in the process of running，you can use the command "chmod +x -R stLFR_v1.1-master/tools" to get executable permission of tools.
+1. If user has "Permission denied" problem in the process of running，you can use the command "chmod +x -R stLFR_v2.1/tools" to get executable permission of tools.
 
 
 License
