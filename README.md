@@ -24,31 +24,44 @@ There are several updates in stLFR_v1.1 comparing with v1:
 
 Download/Install
 ----------------
-Due to the size limitation of GitHub repository, followed softwares need to be installed to the specific directory (stLFR_v2.1/tools):
+Due to the size limitation of GitHub repository, the database directory ('stLFR_V1.2/db') and tool directory ('stLFR_V1.2/tools') are provided by BGI Cloud Drive:
 
-1. HapCUT2-master; 
-2. R-3.5.2; 
-3. bam2depth; 
-4. cnv; 
-5. gatk-4.0.3.0;
-6. jre1.8.0_101; 
-7. python3; 
-8. vcftools; 
-9. Python-2.7.14; 
-10. SOAPnuke-1.5.6; 
-11. bwa; 
-12. fqcheck; 
-13. gnuplot-5.2.2; 
-14. picard; 
-15. samtools-1.3; 
-16. SV2.1.
+      1. tools Link: https://pan.genomics.cn/ucdisk/s/B7Nryq
+      2. database Link: https://pan.genomics.cn/ucdisk/s/vmU3aq
 
-Furthermore, you need to download the following database listed in "db/db.list" from BGI Cloud Drive:
+Tool list in directory ('stLFR_V1.2/tools'):
 
-1. tools Link: https://pan.genomics.cn/ucdisk/s/B7Nryq
-2. database Link: https://pan.genomics.cn/ucdisk/s/vmU3aq
+      1. bam2depth
+      2. bwa
+      3. circos
+      4. cnv
+      5. fqcheck
+      6. gatk4
+      7. HapCUT2-master
+      8. jre
+      9. MegaBOLT
+      10. monitor
+      11. picard
+      12. Python2
+      13. python3
+      14. R
+      15. rtg-tools
+      16. samtools
+      17. SOAPnuke
+      18. sv
+      19. vcftools
 
-Two Demo stLFR libraries for test, and every library consists two lanes.
+Database list in direcotry ('stLFR_V1.2/db'):
+
+      1. barcode/
+      2. db.list
+      3. gatk/
+      4. NA12878/
+      5. phasedvcf/
+      6. queue.list
+      7. reference/
+
+Meanwhile, two Demo stLFR libraries are provided for test, and every library consists two lanes.
 Libraries Link:
 
 1. T0001-2: ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0057111/
