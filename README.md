@@ -1,7 +1,7 @@
 # stLFR_V1.2
 
 Introduction
--------
+----------------
 Tool of stLFR(Single Tube Long Fragment Reads) data analysis
 
 stLFR FAQs is directed to MGI_Bioinfor@genomics.cn.
@@ -9,7 +9,7 @@ stLFR FAQs is directed to MGI_Bioinfor@genomics.cn.
 Download source code package from https://github.com/MGI-tech-bioinformatics/stLFR_V1.2
 
 Updates 
--------
+----------------
 Jan 10, 2020
 1. updated SV module (SV2.1, https://github.com/MGI-tech-bioinformatics/stLFR_SV2.1_module)
 2. added novel automated HMTL report
@@ -39,17 +39,16 @@ Tool list in directory ('stLFR_V1.2/tools'):
       6. gatk4
       7. HapCUT2-master
       8. jre
-      9. MegaBOLT
-      10. monitor
-      11. picard
-      12. Python2
-      13. python3
-      14. R
-      15. rtg-tools
-      16. samtools
-      17. SOAPnuke
-      18. sv
-      19. vcftools
+      9. monitor
+      10. picard
+      11. Python2
+      12. python3
+      13. R
+      14. rtg-tools
+      15. samtools
+      16. SOAPnuke
+      17. sv
+      18. vcftools
 
 Database list in direcotry ('stLFR_V1.2/db'):
 
@@ -61,14 +60,13 @@ Database list in direcotry ('stLFR_V1.2/db'):
       6. queue.list
       7. reference/
 
-Meanwhile, two Demo stLFR libraries are provided for test, and every library consists two lanes.
-Libraries Link:
+Meanwhile, two Demo stLFR libraries are provided for test, and every library consists two lanes:
 
       1. T0001-2: ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0057111/
       2. T0001-4: ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0094773/
 
 Usage
--------
+----------------
 1. Make sure 'sample.list' file on a right format, you can refer to 'path' file in the example.
 
 2. Run the automatical delivery script. Default reference: [hs37d5]
@@ -76,7 +74,7 @@ Usage
          perl bin/stLFR_SGE -l SAMPLELIST -analysis align -outputdir OUTPUTDIR -inputdir INPUTDIR ...
 
 Main progarm arguments:
-----------
+----------------
 
    Sample List
    
@@ -192,7 +190,7 @@ Main progarm arguments:
        -run        Run workflow after main shells built.
 
 Result
--------
+----------------
 After all analysis processes ending, you will get these files below:
 
       1.  HTML report:                              *_cn.html, *_en.html
@@ -214,12 +212,12 @@ After all analysis processes ending, you will get these files below:
       17. variant CIRCOS:                           *.circos.svg, *.circos.png, *.legend_circos.pdf
 
 Additional Information
--------
+----------------
 1. If user has "Permission denied" problem in the process of running，you can use the command "chmod +x -R stLFR_v2.1/tools" to get executable permission of tools.
 
 
 License
--------
+----------------
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions： 
   
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
