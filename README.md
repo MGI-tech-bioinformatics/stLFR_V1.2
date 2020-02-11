@@ -26,8 +26,10 @@ Download/Install
 ----------------
 Due to the size limitation of GitHub repository, the database directory ('stLFR_V1.2/db') and tool directory ('stLFR_V1.2/tools') are provided by BGI Cloud Drive:
 
-      1. tools Link: https://pan.genomics.cn/ucdisk/s/B7Nryq
-      2. database Link: https://pan.genomics.cn/ucdisk/s/vmU3aq
+      1. tools Link:
+            https://pan.genomics.cn/ucdisk/s/B7Nryq
+      2. database Link:
+            https://pan.genomics.cn/ucdisk/s/vmU3aq
 
 Tool list in directory ('stLFR_V1.2/tools'):
 
@@ -62,14 +64,15 @@ Database list in direcotry ('stLFR_V1.2/db'):
 
 Meanwhile, two Demo stLFR libraries are provided for test, and every library consists two lanes:
 
-      1. T0001-2: ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0057111/
-      2. T0001-4: ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0094773/
+      1. T0001-2:
+            ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0057111/
+      2. T0001-4:
+            ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0094773/
 
 Usage
 ----------------
 1. Make sure 'sample.list' file on a right format, you can refer to 'path' file in the example.
-
-2. Run the automatical delivery script. Default reference: [hs37d5]
+2. Run the automatical delivery script.
 
          perl bin/stLFR_SGE -l SAMPLELIST -analysis align -outputdir OUTPUTDIR -inputdir INPUTDIR ...
 
