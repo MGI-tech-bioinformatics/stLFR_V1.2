@@ -33,24 +33,12 @@ Due to the size limitation of GitHub repository, the database directory ('stLFR_
 
 Tool list in directory ('stLFR_V1.2/tools'):
 
-      1. bam2depth
-      2. bwa
-      3. circos
-      4. cnv
-      5. fqcheck
-      6. gatk4
-      7. HapCUT2-master
-      8. jre
-      9. monitor
-      10. picard
-      11. Python2
-      12. python3
-      13. R
-      14. rtg-tools
-      15. samtools
-      16. SOAPnuke
-      17. sv
-      18. vcftools
+      1. download tools from BGI Cloud () and check
+      2. install some software by yourself, such as R, python2, et.
+      3. some packages are required for software/tool, such as:
+            R:          ggplot2, scales, regioneR, karyoploteR
+            python2:    vcf, pysam, numpy
+            python3:    pysam
 
 Database:
 
@@ -58,7 +46,7 @@ Database:
       2. check and prepare database follow the 'readme.txt' in BGI Cloud
       3. place database follow the 'db.tree.list' in GitHub
 
-Meanwhile, two Demo stLFR libraries are provided for test, and every library consists two lanes:
+Meanwhile, two demo stLFR libraries are provided for testing, and every library consists two lanes:
 
       1. T0001-2:
             ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0057111/
@@ -70,7 +58,7 @@ Usage
 1. Make sure 'sample.list' file on a right format, you can refer to 'path' file in the example.
 2. Run the automatical delivery script.
 
-         perl bin/stLFR_SGE -l SAMPLELIST -analysis align -outputdir OUTPUTDIR -inputdir INPUTDIR ...
+         perl bin/stLFR_SGE -l SAMPLELIST -analysis all -outputdir OUTPUTDIR -inputdir INPUTDIR ...
 
 Main progarm arguments:
 ----------------
