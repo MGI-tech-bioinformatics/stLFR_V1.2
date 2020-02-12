@@ -1,0 +1,209 @@
+db/
+├── barcode
+│   └── barcode.list
+├── db.list
+├── dbsnp
+│   ├── hg19.dbsnp.vcf
+│   ├── hg19.dbsnp.vcf.idx
+│   ├── hs37d5.dbsnp.vcf
+│   └── hs37d5.dbsnp.vcf.idx
+├── gatk
+│   ├── 1000G_omni2.5.hg19.vcf.gz
+│   ├── 1000G_omni2.5.hg19.vcf.gz.tbi
+│   ├── 1000G_omni2.5.hs37d5.vcf.gz
+│   ├── 1000G_omni2.5.hs37d5.vcf.gz.tbi
+│   ├── 1000G_phase1.indels.hg19.vcf.gz
+│   ├── 1000G_phase1.indels.hg19.vcf.gz.tbi
+│   ├── 1000G_phase1.indels.hs37d5.vcf.gz
+│   ├── 1000G_phase1.indels.hs37d5.vcf.gz.tbi
+│   ├── 1000G_phase1.snps.high_confidence.hg19.vcf.gz
+│   ├── 1000G_phase1.snps.high_confidence.hg19.vcf.gz.tbi
+│   ├── 1000G_phase1.snps.high_confidence.hs37d5.vcf.gz
+│   ├── 1000G_phase1.snps.high_confidence.hs37d5.vcf.gz.tbi
+│   ├── dbsnp_138.hg19.vcf.gz
+│   ├── dbsnp_138.hg19.vcf.gz.tbi
+│   ├── dbsnp_138.hs37d5.vcf.gz
+│   ├── dbsnp_138.hs37d5.vcf.gz.tbi
+│   ├── hapmap_3.3.hg19.vcf.gz
+│   ├── hapmap_3.3.hg19.vcf.gz.tbi
+│   ├── hapmap_3.3.hs37d5.vcf.gz
+│   ├── hapmap_3.3.hs37d5.vcf.gz.tbi
+│   ├── Mills_and_1000G_gold_standard.indels.hg19.vcf.gz
+│   ├── Mills_and_1000G_gold_standard.indels.hg19.vcf.gz.tbi
+│   ├── Mills_and_1000G_gold_standard.indels.hs37d5.vcf.gz
+│   └── Mills_and_1000G_gold_standard.indels.hs37d5.vcf.gz.tbi
+├── NA12878
+│   ├── baseline.hg19.vcf.gz
+│   ├── baseline.hg19.vcf.gz.tbi
+│   ├── baseline.hs37d5.vcf.gz
+│   ├── baseline.hs37d5.vcf.gz.tbi
+│   ├── highconf.hg19.bed
+│   └── highconf.hs37d5.bed
+├── phasedvcf
+│   ├── hg19.chr10.vcf
+│   ├── hg19.chr11.vcf
+│   ├── hg19.chr12.vcf
+│   ├── hg19.chr13.vcf
+│   ├── hg19.chr14.vcf
+│   ├── hg19.chr15.vcf
+│   ├── hg19.chr16.vcf
+│   ├── hg19.chr17.vcf
+│   ├── hg19.chr18.vcf
+│   ├── hg19.chr19.vcf
+│   ├── hg19.chr1.vcf
+│   ├── hg19.chr20.vcf
+│   ├── hg19.chr21.vcf
+│   ├── hg19.chr22.vcf
+│   ├── hg19.chr2.vcf
+│   ├── hg19.chr3.vcf
+│   ├── hg19.chr4.vcf
+│   ├── hg19.chr5.vcf
+│   ├── hg19.chr6.vcf
+│   ├── hg19.chr7.vcf
+│   ├── hg19.chr8.vcf
+│   ├── hg19.chr9.vcf
+│   ├── hg19.chrX.vcf
+│   ├── hg19.chrY.vcf
+│   ├── hs37d5.10.vcf
+│   ├── hs37d5.11.vcf
+│   ├── hs37d5.12.vcf
+│   ├── hs37d5.13.vcf
+│   ├── hs37d5.14.vcf
+│   ├── hs37d5.15.vcf
+│   ├── hs37d5.16.vcf
+│   ├── hs37d5.17.vcf
+│   ├── hs37d5.18.vcf
+│   ├── hs37d5.19.vcf
+│   ├── hs37d5.1.vcf
+│   ├── hs37d5.20.vcf
+│   ├── hs37d5.21.vcf
+│   ├── hs37d5.22.vcf
+│   ├── hs37d5.2.vcf
+│   ├── hs37d5.3.vcf
+│   ├── hs37d5.4.vcf
+│   ├── hs37d5.5.vcf
+│   ├── hs37d5.6.vcf
+│   ├── hs37d5.7.vcf
+│   ├── hs37d5.8.vcf
+│   ├── hs37d5.9.vcf
+│   ├── hs37d5.X.vcf
+│   └── hs37d5.Y.vcf
+├── queue.list
+└── reference
+    ├── hg19
+    │   ├── chr10.fa
+    │   ├── chr10.fa.fai
+    │   ├── chr11.fa
+    │   ├── chr11.fa.fai
+    │   ├── chr12.fa
+    │   ├── chr12.fa.fai
+    │   ├── chr13.fa
+    │   ├── chr13.fa.fai
+    │   ├── chr14.fa
+    │   ├── chr14.fa.fai
+    │   ├── chr15.fa
+    │   ├── chr15.fa.fai
+    │   ├── chr16.fa
+    │   ├── chr16.fa.fai
+    │   ├── chr17.fa
+    │   ├── chr17.fa.fai
+    │   ├── chr18.fa
+    │   ├── chr18.fa.fai
+    │   ├── chr19.fa
+    │   ├── chr19.fa.fai
+    │   ├── chr1.fa
+    │   ├── chr1.fa.fai
+    │   ├── chr20.fa
+    │   ├── chr20.fa.fai
+    │   ├── chr21.fa
+    │   ├── chr21.fa.fai
+    │   ├── chr22.fa
+    │   ├── chr22.fa.fai
+    │   ├── chr2.fa
+    │   ├── chr2.fa.fai
+    │   ├── chr3.fa
+    │   ├── chr3.fa.fai
+    │   ├── chr4.fa
+    │   ├── chr4.fa.fai
+    │   ├── chr5.fa
+    │   ├── chr5.fa.fai
+    │   ├── chr6.fa
+    │   ├── chr6.fa.fai
+    │   ├── chr7.fa
+    │   ├── chr7.fa.fai
+    │   ├── chr8.fa
+    │   ├── chr8.fa.fai
+    │   ├── chr9.fa
+    │   ├── chr9.fa.fai
+    │   ├── chrM.fa
+    │   ├── chrM.fa.fai
+    │   ├── chrX.fa
+    │   ├── chrX.fa.fai
+    │   ├── chrY.fa
+    │   ├── chrY.fa.fai
+    │   ├── hg19.chrom.sizes
+    │   ├── hg19.dict
+    │   ├── hg19.fa
+    │   ├── hg19.fa.amb
+    │   ├── hg19.fa.ann
+    │   ├── hg19.fa.bwt
+    │   ├── hg19.fa.fai
+    │   ├── hg19.fa.pac
+    │   ├── hg19.fa.sa
+    │   ├── hg19.fa.vcfi
+    │   ├── hg19.nonN.region
+    │   └── hg19.SDF
+    │       ├── done
+    │       ├── format.log
+    │       ├── mainIndex
+    │       ├── namedata0
+    │       ├── nameIndex0
+    │       ├── namepointer0
+    │       ├── progress
+    │       ├── reference.txt
+    │       ├── seqdata0
+    │       ├── seqdata1
+    │       ├── seqdata2
+    │       ├── seqdata3
+    │       ├── seqpointer0
+    │       ├── seqpointer1
+    │       ├── seqpointer2
+    │       ├── seqpointer3
+    │       ├── sequenceIndex0
+    │       └── summary.txt
+    └── hs37d5
+        ├── hs37d5.chrom.sizes
+        ├── hs37d5.dict
+        ├── hs37d5.fa
+        ├── hs37d5.fa.amb
+        ├── hs37d5.fa.ann
+        ├── hs37d5.fa.bwt
+        ├── hs37d5.fa.fai
+        ├── hs37d5.fa.pac
+        ├── hs37d5.fa.sa
+        ├── hs37d5.fa.vcfi
+        ├── hs37d5.nonN.region
+        └── hs37d5.SDF
+            ├── done
+            ├── format.log
+            ├── mainIndex
+            ├── namedata0
+            ├── nameIndex0
+            ├── namepointer0
+            ├── progress
+            ├── reference.txt
+            ├── seqdata0
+            ├── seqdata1
+            ├── seqdata2
+            ├── seqdata3
+            ├── seqpointer0
+            ├── seqpointer1
+            ├── seqpointer2
+            ├── seqpointer3
+            ├── sequenceIndex0
+            ├── suffixdata0
+            ├── suffixIndex0
+            ├── suffixpointer0
+            └── summary.txt
+
+10 directories, 196 files
