@@ -36,7 +36,7 @@ Tool list in directory ('stLFR_V1.2/tools'):
       1. download tools from BGI Cloud () and check
       2. install some software by yourself, such as R, python2, et.
       3. some packages are required for software/tool, such as:
-            R:          ggplot2, scales, regioneR, karyoploteR
+            R:          ggplot2, scales, regioneR, karyoploteR(https://bioconductor.org/packages/release/bioc/html/karyoploteR.html)
             python2:    vcf, pysam, numpy
             python3:    pysam
 
