@@ -29,7 +29,7 @@ Due to the size limitation of GitHub repository, the database directory ('stLFR_
       1. tools Link:
             https://pan.genomics.cn/ucdisk/s/B7Nryq
       2. database Link:
-            https://pan.genomics.cn/ucdisk/s/vmU3aq
+            https://pan.genomics.cn/ucdisk/s/zMNzyi
 
 Tool list in directory ('stLFR_V1.2/tools'):
 
@@ -52,15 +52,11 @@ Tool list in directory ('stLFR_V1.2/tools'):
       17. sv
       18. vcftools
 
-Database list in direcotry ('stLFR_V1.2/db'):
+Database:
 
-      1. barcode/
-      2. db.list
-      3. gatk/
-      4. NA12878/
-      5. phasedvcf/
-      6. queue.list
-      7. reference/
+      1. download database from BGI Cloud (https://pan.genomics.cn/ucdisk/s/zMNzyi)
+      2. check and prepare database follow the 'readme.txt' in BGI Cloud
+      3. place database follow the 'db.tree.list' in GitHub
 
 Meanwhile, two Demo stLFR libraries are provided for test, and every library consists two lanes:
 
