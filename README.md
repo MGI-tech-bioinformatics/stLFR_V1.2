@@ -33,7 +33,7 @@ Due to the size limitation of GitHub repository, the database directory ('stLFR_
 
 Tool list in directory ('stLFR_V1.2/tools'):
 
-      1. download tools from BGI Cloud (https://pan.genomics.cn/ucdisk/s/ryUvuq) and check
+      1. download tools from BGI Cloud (https://pan.genomics.cn/ucdisk/s/ryUvuq) and check up MD5 values in the related MD5.txt files.
       2. install some softwares by yourself if unavialable after downloading, such as R and Python2.
       3. some packages are required for software/tool, such as:
             R:          ggplot2, scales, regioneR, karyoploteR(https://bioconductor.org/packages/release/bioc/html/karyoploteR.html)
