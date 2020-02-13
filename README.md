@@ -157,13 +157,8 @@ Main progarm arguments:
 
    Task Monitor Type
    
-       -type    [ local ]
-                     Task monitor type.
-                     blc:    running on BLC using software defined by -task
-                     fpga:   running on FPGA server using watchDog
-                     local:  running on local machine using watchDog
        -cpu      [ 60 ]
-                     CPU number on server, using when -type blc and -type fpga
+                     CPU number on server
 
    Baseline for SNP/INDEL evaluation
    
