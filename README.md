@@ -13,7 +13,7 @@ Updates
 Jan 10, 2020
 1. Updated SV module (SV2.1, https://github.com/MGI-tech-bioinformatics/stLFR_SV2.1_module)
 2. Novel summary report of HMTL format.
-3. new consturcture of tool with some new parameters 
+3. New pipeline structure and some parameters've changed
 
 May 6, 2019
 There are several updates in stLFR_v1.1 comparing with v1:
