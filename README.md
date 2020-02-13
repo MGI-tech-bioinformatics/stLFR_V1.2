@@ -13,7 +13,7 @@ Updates
 Jan 10, 2020
 1. Updated SV module (SV2.1, https://github.com/MGI-tech-bioinformatics/stLFR_SV2.1_module)
 2. Novel summary report of HMTL format.
-3. New pipeline structure and some parameters have changed.
+3. Redsigned pipeline structure and changed some parameters.
 
 May 6, 2019
 There are several updates in stLFR_v1.1 comparing with v1:
@@ -34,7 +34,7 @@ Due to the size limitation of GitHub repository, the database directory ('stLFR_
 Tool list in directory ('stLFR_V1.2/tools'):
 
       1. download tools from BGI Cloud (https://pan.genomics.cn/ucdisk/s/ryUvuq) and check
-      2. install some software by yourself if unavialable after copy, such as R, python2, et.
+      2. install some softwares by yourself if unavialable after downloading, such as R and Python2.
       3. some packages are required for software/tool, such as:
             R:          ggplot2, scales, regioneR, karyoploteR(https://bioconductor.org/packages/release/bioc/html/karyoploteR.html)
             python2:    vcf, pysam, numpy
