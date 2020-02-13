@@ -2,17 +2,17 @@
 
 Introduction
 ----------------
-Tool of stLFR(Single Tube Long Fragment Reads) data analysis
+Tools of stLFR(Single Tube Long Fragment Reads) data analysis.
 
 stLFR FAQs is directed to MGI_Bioinfor@genomics.cn.
 
-Download source code package from https://github.com/MGI-tech-bioinformatics/stLFR_V1.2
+Download source code package from https://github.com/MGI-tech-bioinformatics/stLFR_V1.2.
 
 Updates 
 ----------------
 Jan 10, 2020
-1. updated SV module (SV2.1, https://github.com/MGI-tech-bioinformatics/stLFR_SV2.1_module)
-2. added novel automated HMTL report
+1. Updated SV module (SV2.1, https://github.com/MGI-tech-bioinformatics/stLFR_SV2.1_module)
+2. Novel summary report of HMTL format.
 3. new consturcture of tool with some new parameters 
 
 May 6, 2019
