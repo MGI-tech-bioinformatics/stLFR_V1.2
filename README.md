@@ -27,14 +27,14 @@ Download/Install
 Due to the size limitation of GitHub repository, the database directory ('stLFR_V1.2/db') and tool directory ('stLFR_V1.2/tools') are provided by BGI Cloud Drive:
 
       1. tools Link:
-            https://pan.genomics.cn/ucdisk/s/B7Nryq
+            https://pan.genomics.cn/ucdisk/s/ryUvuq
       2. database Link:
             https://pan.genomics.cn/ucdisk/s/zMNzyi
 
 Tool list in directory ('stLFR_V1.2/tools'):
 
-      1. download tools from BGI Cloud () and check
-      2. install some software by yourself, such as R, python2, et.
+      1. download tools from BGI Cloud (https://pan.genomics.cn/ucdisk/s/ryUvuq) and check
+      2. install some software by yourself if unavialable after copy, such as R, python2, et.
       3. some packages are required for software/tool, such as:
             R:          ggplot2, scales, regioneR, karyoploteR(https://bioconductor.org/packages/release/bioc/html/karyoploteR.html)
             python2:    vcf, pysam, numpy
