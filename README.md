@@ -66,10 +66,18 @@ Meanwhile, two demo stLFR libraries are provided for testing, and every library 
 
 Usage
 ----------------
-1. Make sure 'sample.list' file on a right format, you can refer to 'path' file in the example.
-2. Run the automatical delivery script.
+1. Make sure 'SAMPLELIST' file is in a right format.
+2. Run the automatic.
 
-         perl bin/stLFR_SGE -l SAMPLELIST -analysis all -outputdir OUTPUTDIR -inputdir INPUTDIR ...
+         perl bin/stLFR_SGE -l SAMPLELIST -outputdir OUTPUTDIR
+         
+3. Or analyze one data in more than one steps:
+
+         # only run fastq filter module first
+         perl bin/stLFR_SGE -l SAMPLELIST -outputdir ANALYSIS_FQ -analysis filter
+         # do other modules later
+         perl bin/stLFR_SGE -l SAMPLELIST -outputdir ANALYSIS_OTHER -analysis align,phase,cnvsv,report -inputdir ANALYSIS_FQ
+         
 
 Main progarm arguments:
 ----------------
@@ -92,14 +100,6 @@ Main progarm arguments:
                           SAM2   /DATA/slide1/L01:/DATA/slide2/L01   0:1-8         hg19
                           SAM3   /DATA/slide2/L02                    0             REFERENCE/ref.fa      DBSNP/dbsnp.vcf
                           SAM4   /DATA/slide2/L03                    0             hs37d5                -                   BLACKLIST    CONTROLLIST
-
-   Previous Result Directory
-   
-       -inputdir
-                     Input directory path with results in previous process. [ ]
-                     1. align:  need filter result
-                     2. phase:  need align result
-                     3. cnvsv:  need align and phase result
 
    Output Directory
    
@@ -152,7 +152,7 @@ Main progarm arguments:
    Analysis Modules
    
        -analysis  [ all ]
-                     There are 5 modules in this program: filter, align, phase, cnvsv, report.
+                     There are 5 modules in this program: filter -> align -> phase -> cnvsv -> report.
                        -analysis all  == -analysis filter,align,phase,cnvsv,report.
                        -analysis base == -analysis filter,align,phase,report.
 
@@ -160,6 +160,12 @@ Main progarm arguments:
                          base               : filter + align + phase + report
                          align              : align + report
                          filter,align,phase : filter + align + phase + report
+
+       -inputdir
+                     Input directory path with results in previous process. [ ]
+                     1. align:  need filter result
+                     2. phase:  need align result
+                     3. cnvsv:  need align and phase result
 
    stLFR barcode position
    
