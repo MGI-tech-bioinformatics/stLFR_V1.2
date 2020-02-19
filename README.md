@@ -27,11 +27,20 @@ Download/Install
 Due to the size limitation of GitHub repository, the database directory ('stLFR_V1.2/db') and tools directory ('stLFR_V1.2/tools') are provided below:
 
       1. tools:
-         For China mainland users, please using BGI Cloud Drive link:https://pan.genomics.cn/ucdisk/s/ryUvuq
-         For other region users, please using One Drive link:https://dwz.cn/V2NsFzUM
+         
+         For China mainland users, please using BGI Cloud Drive link:
+         https://pan.genomics.cn/ucdisk/s/ryUvuq
+         
+         For other region users, please using One Drive link:
+         https://dwz.cn/DWEiVTD6
+         
       2. database:
-         For China mainland users, please using BGI Cloud Drive link:https://pan.genomics.cn/ucdisk/s/zMNzyi
-         For other region users, please using One Drive link:https://dwz.cn/2Yw59AYb
+      
+         For China mainland users, please using BGI Cloud Drive link:
+         https://pan.genomics.cn/ucdisk/s/zMNzyi
+
+         For other region users, please using One Drive link:
+         https://dwz.cn/E7KHU7IE
 
 Tool list in directory ('stLFR_V1.2/tools'):
 
