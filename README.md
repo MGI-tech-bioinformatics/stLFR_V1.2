@@ -67,7 +67,7 @@ Meanwhile, two demo stLFR libraries are provided for testing, and every library 
 Usage
 ----------------
 1. Make sure 'SAMPLELIST' file is in a right format.
-2. Run the automatic.
+2. Run script with default parameters:
 
          perl bin/stLFR_SGE -l SAMPLELIST -outputdir OUTPUTDIR
          
