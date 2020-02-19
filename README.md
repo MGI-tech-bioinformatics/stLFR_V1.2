@@ -24,12 +24,14 @@ There are several updates in stLFR_v1.1 comparing with v1:
 
 Download/Install
 ----------------
-Due to the size limitation of GitHub repository, the database directory ('stLFR_V1.2/db') and tool directory ('stLFR_V1.2/tools') are provided by BGI Cloud Drive:
+Due to the size limitation of GitHub repository, the database directory ('stLFR_V1.2/db') and tools directory ('stLFR_V1.2/tools') are provided below:
 
-      1. tools Link:
-            https://pan.genomics.cn/ucdisk/s/ryUvuq
-      2. database Link:
-            https://pan.genomics.cn/ucdisk/s/zMNzyi
+      1. tools:
+         For China mainland users, please using BGI Cloud Drive link:https://pan.genomics.cn/ucdisk/s/ryUvuq
+         For other region users, please using One Drive link:https://dwz.cn/V2NsFzUM
+      2. database:
+         For China mainland users, please using BGI Cloud Drive link:https://pan.genomics.cn/ucdisk/s/zMNzyi
+         For other region users, please using One Drive link:https://dwz.cn/2Yw59AYb
 
 Tool list in directory ('stLFR_V1.2/tools'):
 
