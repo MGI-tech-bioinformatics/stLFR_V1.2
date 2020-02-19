@@ -104,7 +104,7 @@ Main progarm arguments:
    Output Directory
    
        -outputdir [ ./ ]
-                     Output directiry path.
+                     Output directory path.
 
                      The Format of Output directory (also input directory of this workflow):
                      Inputdir/
