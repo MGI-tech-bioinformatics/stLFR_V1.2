@@ -31,7 +31,7 @@ Due to the size limitation of GitHub repository, the database directory ('stLFR_
          For China mainland users, please using BGI Cloud Drive link:
          https://pan.genomics.cn/ucdisk/s/ryUvuq
          
-         For other region users, please using One Drive link:
+         For other region users, please using OneDrive link:
          https://dwz.cn/DWEiVTD6
          
       2. database:
