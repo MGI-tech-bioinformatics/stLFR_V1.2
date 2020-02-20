@@ -44,7 +44,7 @@ Due to the size limitation of GitHub repository, the database directory ('stLFR_
 
 Tool list in directory ('stLFR_V1.2/tools'):
 
-      1. download tools from BGI Cloud (https://pan.genomics.cn/ucdisk/s/ryUvuq) and check up MD5 values in the related MD5.txt files.
+      1. download tools from BGI Cloud or One Drive and check up MD5 values in the related MD5.txt files.
       2. install some softwares by yourself if unavialable after downloading, such as R and Python2.
       3. some packages are required for software/tool, such as:
             R:          ggplot2, scales, regioneR, karyoploteR(https://bioconductor.org/packages/release/bioc/html/karyoploteR.html)
@@ -53,9 +53,9 @@ Tool list in directory ('stLFR_V1.2/tools'):
 
 Database:
 
-      1. download database from BGI Cloud (https://pan.genomics.cn/ucdisk/s/zMNzyi)
-      2. check and prepare database follow the 'readme.txt' in BGI Cloud
-      3. place database follow the 'db.tree.list' in GitHub
+      1. download database from BGI Cloud or One Drive.
+      2. check and prepare database follow the 'readme.txt' in BGI Cloud.
+      3. place database follow the 'db.tree.list' in GitHub.
       4. fix the file names in 'NA12878' like:
             mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.new_chrID.vcf.gz baseline.hg19.vcf.gz
             mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.new_chrID.vcf.gz.tbi baseline.hg19.vcf.gz.tbi
