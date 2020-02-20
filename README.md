@@ -53,7 +53,7 @@ Tool list in directory ('stLFR_V1.2/tools'):
 
 Database:
 
-      1. download database from BGI Cloud or One Drive.
+      1. download database from BGI Cloud or OneDrive.
       2. check and prepare database follow the 'readme.txt' in BGI Cloud.
       3. place database follow the 'db.tree.list' in GitHub.
 
