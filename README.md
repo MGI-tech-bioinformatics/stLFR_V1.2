@@ -56,6 +56,14 @@ Database:
       1. download database from BGI Cloud (https://pan.genomics.cn/ucdisk/s/zMNzyi)
       2. check and prepare database follow the 'readme.txt' in BGI Cloud
       3. place database follow the 'db.tree.list' in GitHub
+      4. fix the file names in 'NA12878' like:
+            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.new_chrID.vcf.gz baseline.hg19.vcf.gz
+            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.new_chrID.vcf.gz.tbi baseline.hg19.vcf.gz.tbi
+            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz baseline.hs37d5.vcf.gz
+            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz.tbi baseline.hs37d5.vcf.gz.tbi
+            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_nosomaticdel.new_chrID.bed highconf.hg19.bed
+            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_nosomaticdel.bed highconf.hs37d5.bed
+
 
 Meanwhile, two demo stLFR libraries are provided for testing, and every library consists two lanes:
 
