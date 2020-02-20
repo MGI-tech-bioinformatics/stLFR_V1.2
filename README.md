@@ -37,33 +37,25 @@ Due to the size limitation of GitHub repository, the database directory ('stLFR_
       2. database:
       
          For China mainland users, please using BGI Cloud Drive link:
-         https://pan.genomics.cn/ucdisk/s/zMNzyi
+         https://pan.genomics.cn/ucdisk/s/3mmUzy
 
-         For other region users, please using One Drive link:
-         https://dwz.cn/E7KHU7IE
+         For other region users, please using OneDrive link:
+         https://dwz.cn/UKb9SRWU
 
 Tool list in directory ('stLFR_V1.2/tools'):
 
-      1. download tools from BGI Cloud or One Drive and check up MD5 values in the related MD5.txt files.
+      1. download tools from BGI Cloud or OneDrive and check up MD5 values in the related MD5.txt files.
       2. install some softwares by yourself if unavialable after downloading, such as R and Python2.
       3. some packages are required for software/tool, such as:
             R:          ggplot2, scales, regioneR, karyoploteR(https://bioconductor.org/packages/release/bioc/html/karyoploteR.html)
-            python2:    vcf, pysam, numpy
-            python3:    pysam
+            Python2:    vcf, pysam, numpy
+            Python3:    pysam
 
 Database:
 
       1. download database from BGI Cloud or One Drive.
       2. check and prepare database follow the 'readme.txt' in BGI Cloud.
       3. place database follow the 'db.tree.list' in GitHub.
-      4. fix the file names in 'NA12878' like:
-            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.new_chrID.vcf.gz baseline.hg19.vcf.gz
-            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.new_chrID.vcf.gz.tbi baseline.hg19.vcf.gz.tbi
-            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz baseline.hs37d5.vcf.gz
-            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_PGandRTGphasetransfer.vcf.gz.tbi baseline.hs37d5.vcf.gz.tbi
-            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_nosomaticdel.new_chrID.bed highconf.hg19.bed
-            mv  HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.2_highconf_nosomaticdel.bed highconf.hs37d5.bed
-
 
 Meanwhile, two demo stLFR libraries are provided for testing, and every library consists two lanes:
 
