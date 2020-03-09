@@ -22,6 +22,66 @@ There are several updates in stLFR_v1.1 comparing with v1:
 3. Three figures used for illustrating stLFR fragment distribution and coverage are added.
 4. NA12878 benchmark VCF by GIAB is used for haplotype phasing error calculation.
 
+Preinstallation
+----------------
+More than 20 softwares/tools are used in this pipeline, and some of them are difficult to build static binary.
+The tools directory descriped below is just an example. So, please make sure these softwares/tools are installed firstly.
+
+      1. software/tool list
+         the directory/path is required for pipeline, * means the software/tool need pre-install
+         tools
+         |--- bam2depth
+              |___ bam2depth
+         |--- bwa
+              |___ bwa
+         |--- circos            * pre-install, some perl-packages are required
+              |___ bin
+                   |___ circos
+         |--- cnv
+         |--- fqcheck
+              |--- convert      * pre-install
+              |--- fqcheck33
+              |--- fqcheck_distribute.pl
+              |--- gnuplot      * pre-install
+              |___ PLOT.pm
+         |---gatk4              * pre-install
+             |___ gatk
+         |---HapCUT2-master
+             |___ utilitie
+                  |--- LinkFragments.py
+                  |___ calculate_haplotype_statistics.py
+         |--- jre
+              |___ bin
+                   |___ java
+         |--- monitor
+              |___ watchDog.pl
+         |--- picard             * pre-install
+              |___ picard.jar
+         |--- Python2            * pre-install
+              |___ python
+         |--- python3            * pre-install
+              |___ python3
+         |--- R                  * pre-install 
+              |___ bin
+                   |___ R
+         |--- rtg-tools
+              |___ rtg
+         |--- samtools
+              |___ bin
+                   |___ samtools
+         |--- SOAPnuke
+              |___ SOAPnuke
+         |--- sv
+         |___ vcftools
+              |--- bcftools
+              |--- bgzip
+              |___ tabix
+              
+      2. some packages are required for software/tool, such as:
+            R:          ggplot2, scales, regioneR, karyoploteR(https://bioconductor.org/packages/release/bioc/html/karyoploteR.html)
+            Python2:    vcf, pysam, numpy
+            Python3:    pysam
+
 Download/Install
 ----------------
 Due to the size limitation of GitHub repository, the database directory ('stLFR_V1.2/db') and tools directory ('stLFR_V1.2/tools') are provided below:
@@ -45,11 +105,7 @@ Due to the size limitation of GitHub repository, the database directory ('stLFR_
 Tool list in directory ('stLFR_V1.2/tools'):
 
       1. download tools from BGI Cloud or OneDrive and check up MD5 values in the related MD5.txt files.
-      2. install some softwares by yourself if unavialable after downloading, such as R and Python2.
-      3. some packages are required for software/tool, such as:
-            R:          ggplot2, scales, regioneR, karyoploteR(https://bioconductor.org/packages/release/bioc/html/karyoploteR.html)
-            Python2:    vcf, pysam, numpy
-            Python3:    pysam
+      2. install some softwares/tools by yourself.
 
 Database:
 
