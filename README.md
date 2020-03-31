@@ -27,17 +27,17 @@ There are several updates in stLFR_v1.1 comparing with v1:
 
 Run in Docker
 ----------------
-  1. Install docker follow the official website: https://www.docker.com/
-  2. Then do the following for the workflow:
+    1. Install docker follow the official website: https://www.docker.com/
+    2. Then do the following for the workflow:
         docker pull rjunhua/stlfr_reseq_v1.2:v1
-  3. Download and unzip the database from https://pan.genomics.cn/ucdisk/s/jQJFVn,
-     and MD5 from https://pan.genomics.cn/ucdisk/s/rAva6z
-  4. Run the command:
+    3. Download and unzip the database from https://pan.genomics.cn/ucdisk/s/jQJFVn,
+       and MD5 from https://pan.genomics.cn/ucdisk/s/rAva6z
+    4. Run the command:
         docker run -d -P --name STLFRNAME \
         -v /USER/DB:/stLFR/db -v /USER/DATA:/USER/DATA -v /USER/RESULT:/USER/RESULT \
         rjunhua/stlfr_reseq_v1.2:v1 /bin/bash /stLFR/bin/stLFR_SGE \
         /USER/DATA/SAMPLELIST /USER/RSEULT
-  5. Close docker
+    5. Close docker
         docker rm STLFRNAME
   
   Notes:
