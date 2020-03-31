@@ -152,13 +152,6 @@ Usage
 
          perl bin/stLFR_SGE -l SAMPLELIST -outputdir OUTPUTDIR
          
-3. Or analyze one data in more than one steps:
-
-         # only run fastq filter module first
-         perl bin/stLFR_SGE -l SAMPLELIST -outputdir ANALYSIS_FQ -analysis filter
-         # do other modules later
-         perl bin/stLFR_SGE -l SAMPLELIST -outputdir ANALYSIS_OTHER -analysis align,phase,cnvsv,report -inputdir ANALYSIS_FQ
-         
 
 Main progarm arguments:
 ----------------
@@ -187,67 +180,6 @@ Main progarm arguments:
        -outputdir [ ./ ]
                      Output directory path.
 
-                     The Format of Output directory (also input directory of this workflow):
-                     Inputdir/
-                     |-- 01.filter   // for align
-                     |   |__ SAMPLE
-                     |       |__ SAMPLE.clean_1.fq.gz
-                     |       |__ SAMPLE.clean_2.fq.gz
-                     |-- 02.align    // for phase, cnv and sv
-                     |   |__ SAMPLE
-                     |       |__ SAMPLE.sortdup.bqsr.bam
-                     |       |__ SAMPLE.sortdup.bqsr.bam.bai
-                     |       |__ SAMPLE.sortdup.bqsr.bam.HaplotypeCaller.vcf.gz
-                     |       |__ SAMPLE.sortdup.bqsr.bam.HaplotypeCaller.vcf.gz.tbi
-                     |-- 03.phase    // for cnv
-                     |   |__ SAMPLE
-                     |       |__ phasesplit
-                     |           |__ hapblock_SAMPLE_CHROMOSOME
-                     |-- 04.cnv
-                     |   |__ SAMPLE
-                     |       |__ SAMPLE.CNV.result.xls
-                     |-- 05.sv
-                     |   |__ SAMPLE
-                     |       |__ SAMPLE.SV.simple.result.xls
-                     |       |__ SAMPLE.SV.complex.result.xls
-                     |__ file
-                         |__ SAMPLE
-                             |-- alignment
-                             |   |__ SAMPLE.sortdup.bqsr.bam
-                             |   |__ SAMPLE.sortdup.bqsr.bam.bai
-                             |-- CNV
-                             |   |__ SAMPLE.CNV.result.xls
-                             |-- haplotype
-                             |   |__ SAMPLE.hapblock
-                             |   |__ SAMPLE.hapcut_stat.txt
-                             |   |__ SAMPLE.inked_fragment
-                             |-- sequence
-                             |   |__ SAMPLE.clean_1.fq.gz
-                             |   |__ SAMPLE.clean_2.fq.gz
-                             |-- SV
-                             |   |__ SAMPLE.SV.result.xls
-                             |__ variant
-                                 |__ SAMPLE.sortdup.bqsr.bam.HaplotypeCaller.vcf.gz
-                                 |__ SAMPLE.sortdup.bqsr.bam.HaplotypeCaller.vcf.gz.tbi
-
-   Analysis Modules
-   
-       -analysis  [ all ]
-                     There are 5 modules in this program: filter -> align -> phase -> cnvsv -> report.
-                       -analysis all  == -analysis filter,align,phase,cnvsv,report.
-                       -analysis base == -analysis filter,align,phase,report.
-
-                     eg: all                : filter + align + phase + cnvsv + report
-                         base               : filter + align + phase + report
-                         align              : align + report
-                         filter,align,phase : filter + align + phase + report
-
-       -inputdir
-                     Input directory path with results in previous process. [ ]
-                     1. align:  need filter result
-                     2. phase:  need align result
-                     3. cnvsv:  need align and phase result
-
    stLFR barcode position
    
        -position [ 101_10,117_10,133_10 ]
@@ -257,11 +189,6 @@ Main progarm arguments:
    
        -cpu      [ 60 ]
                      CPU number on server
-
-   Baseline for SNP/INDEL evaluation
-   
-       -baseline   Baseline VCF for NA12878 on hg19 or hs37d5.
-       -confbed    High confidence BED for NA12878 on hg19 or hs37d5.
 
    Usage
    
