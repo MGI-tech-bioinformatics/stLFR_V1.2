@@ -41,7 +41,7 @@ Run in Docker
         docker rm STLFRNAME
   
   Notes:
-  1. Please make sure that you run the docker container with at least 4GB memory and 15 CPU.
+  1. Please make sure that you run the docker container with at least 45GB memory and 15 CPU.
   2. The input is sample list and output directory which descripted below (Main progarm arguments).
 
 Run in local server
