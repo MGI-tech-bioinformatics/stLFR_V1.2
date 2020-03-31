@@ -10,6 +10,9 @@ Download source code package from https://github.com/MGI-tech-bioinformatics/stL
 
 Updates 
 ----------------
+Mar 31, 2020
+1. add a Docker version of stLFR V1.2.
+
 Jan 10, 2020
 1. Updated SV module (SV2.1, https://github.com/MGI-tech-bioinformatics/stLFR_SV2.1_module)
 2. Novel summary report of HMTL format.
@@ -21,6 +24,28 @@ There are several updates in stLFR_v1.1 comparing with v1:
 2. Updated CNV and SV detection tools are implied in stLFR_v1.1 for decreasing false discovery rate.
 3. Three figures used for illustrating stLFR fragment distribution and coverage are added.
 4. NA12878 benchmark VCF by GIAB is used for haplotype phasing error calculation.
+
+Run in Docker
+----------------
+  1. Install docker follow the official website: https://www.docker.com/
+  2. Then do the following for the workflow:
+      docker pull rjunhua/stlfr_reseq_v1.2:v1
+  3. Download and unzip the database from https://pan.genomics.cn/ucdisk/s/jQJFVn,
+     and MD5 from https://pan.genomics.cn/ucdisk/s/rAva6z
+  4. Run the command:
+      docker run -d -P --name STLFRNAME \
+      -v /USER/DB:/stLFR/db -v /USER/DATA:/USER/DATA -v /USER/RESULT:/USER/RESULT \
+      rjunhua/stlfr_reseq_v1.2:v1 /bin/bash /stLFR/bin/stLFR_SGE \
+      /USER/DATA/SAMPLELIST /USER/RSEULT
+  5. Close docker
+      docker rm STLFRNAME
+  
+  Notes:
+  1. Please make sure that you run the docker container with at least 4GB memory and 15 CPU.
+  2. The input is sample list and output directory which descripted below (L166 and L187).
+
+Run in local server
+----------------
 
 Preinstallation
 ----------------
