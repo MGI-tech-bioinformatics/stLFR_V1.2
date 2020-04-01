@@ -30,8 +30,12 @@ Run in Docker
     1. Install docker follow the official website: https://www.docker.com/
     2. Then do the following for the workflow:
         docker pull rjunhua/stlfr_reseq_v1.2:v1
-    3. Download and unzip the database from https://pan.genomics.cn/ucdisk/s/jQJFVn,
-       and MD5 from https://pan.genomics.cn/ucdisk/s/rAva6z
+    3. Download and unzip the database 
+        BGI:
+          https://pan.genomics.cn/ucdisk/s/jQJFVn
+          https://pan.genomics.cn/ucdisk/s/rAva6z
+        OneDrive:
+          xxxxxx
     4. Run the command:
         docker run -d -P --name STLFRNAME \
         -v /USER/DB:/stLFR/db -v /USER/DATA:/USER/DATA -v /USER/RESULT:/USER/RESULT \
