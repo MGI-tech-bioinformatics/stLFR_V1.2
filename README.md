@@ -32,8 +32,7 @@ Run in Docker
         docker pull rjunhua/stlfr_reseq_v1.2:v1
     3. Download and unzip the database 
         BGI:
-          https://pan.genomics.cn/ucdisk/s/jQJFVn
-          https://pan.genomics.cn/ucdisk/s/rAva6z
+          https://pan.genomics.cn/ucdisk/s/7vUNvu
         OneDrive:
           xxxxxx
     4. Run the command:
