@@ -31,10 +31,10 @@ Run in Docker
     2. Then do the following for the workflow:
         docker pull rjunhua/stlfr_reseq_v1.2:v1
     3. Download and unzip the database 
-        BGI:
+        BGI Cloud Drive:
           https://pan.genomics.cn/ucdisk/s/Jvmuii
         OneDrive:
-          xxxxxx
+          https://dwz.cn/ZPlGA0eJ
     4. Run the command:
         docker run -d -P --name STLFRNAME \
         -v /USER/DB:/stLFR/db -v /USER/DATA:/USER/DATA -v /USER/RESULT:/USER/RESULT \
