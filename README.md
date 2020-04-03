@@ -120,7 +120,7 @@ Due to the size limitation of GitHub repository, the database directory ('stLFR_
          https://pan.genomics.cn/ucdisk/s/ErYf6v
          
          For other region users, please using OneDrive link:
-         https://dwz.cn/DWEiVTD6
+         https://dwz.cn/dVkXg7No
          
       2. database:
       
