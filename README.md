@@ -48,7 +48,7 @@ With Docker
       (b) $DATA_LOCAL: directory on your local machine that has the sequence data and "samplelist" file.
           "samplelist" must follow the format descripted bellow,
           and the *PATH* in "samplelist" must be absolute dicrtory of $DATA_LOCAL.
-      (c) $RESULT_LOCAL: direcotry for result.
+      (c) $RESULT_LOCAL: directory for result.
     2. Run the command:
         docker run -d -P \
         --name $STLFRNAME \
