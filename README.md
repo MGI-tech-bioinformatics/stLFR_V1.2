@@ -58,7 +58,7 @@ With Docker
         rjunhua/stlfr_reseq_v1.2:v1 \
         /bin/bash \
         /stLFR/bin/stLFR_SGE \
-        $DATA_LOCAL/SAMPLELIST \
+        $DATA_LOCAL/samplelist \
         $RESULT_LOCAL
     5. After report is generated:
         docker rm $STLFRNAME
