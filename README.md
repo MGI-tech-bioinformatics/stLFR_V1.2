@@ -60,7 +60,7 @@ With Docker
         /stLFR/bin/stLFR_SGE \
         $DATA_LOCAL/samplelist \
         $RESULT_LOCAL
-    5. After report is generated:
+    3. After report is generated:
         docker rm $STLFRNAME
 
 Without Docker but run in local server
