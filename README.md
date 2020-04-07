@@ -10,199 +10,124 @@ Download source code package from https://github.com/MGI-tech-bioinformatics/stL
 
 Updates 
 ----------------
-Mar 31, 2020
-1. add a Docker version of stLFR V1.2.
+    Mar 31, 2020
+    1. add a Docker version of stLFR V1.2.
+    2. fix one BUG occur in SV detection.
 
-Jan 10, 2020
-1. Updated SV module (SV2.1, https://github.com/MGI-tech-bioinformatics/stLFR_SV2.1_module)
-2. Novel summary report of HMTL format.
-3. Redesigned pipeline structure and changed some parameters.
+    Jan 10, 2020
+    1. Updated SV module (SV2.1, https://github.com/MGI-tech-bioinformatics/stLFR_SV2.1_module)
+    2. Novel summary report of HMTL format.
+    3. Redesigned pipeline structure and changed some parameters.
 
-May 6, 2019
-There are several updates in stLFR_v1.1 comparing with v1:
-1. Users could use an alternative reference type (hg19 or hs37d5) in stLFR_v1.1 by --ref option instead of only hg19.
-2. Updated CNV and SV detection tools are implied in stLFR_v1.1 for decreasing false discovery rate.
-3. Three figures used for illustrating stLFR fragment distribution and coverage are added.
-4. NA12878 benchmark VCF by GIAB is used for haplotype phasing error calculation.
+    May 6, 2019
+    There are several updates in stLFR_v1.1 comparing with v1:
+    1. Users could use an alternative reference type (hg19 or hs37d5) in stLFR_v1.1 by --ref option instead of only hg19.
+    2. Updated CNV and SV detection tools are implied in stLFR_v1.1 for decreasing false discovery rate.
+    3. Three figures used for illustrating stLFR fragment distribution and coverage are added.
+    4. NA12878 benchmark VCF by GIAB is used for haplotype phasing error calculation.
 
-Run in Docker
+With Docker
 ----------------
-    1. Install docker follow the official website: https://www.docker.com/
+    Setup
+    1. Install docker follow the official website
+        https://www.docker.com/
     2. Then do the following for the workflow:
         docker pull rjunhua/stlfr_reseq_v1.2:v1
-    3. Download and unzip the database 
-        BGI Cloud Drive:
+    3. Download and unzip the database
+        From BGI Cloud Drive:
           https://pan.genomics.cn/ucdisk/s/Jvmuii
-        OneDrive:
+        Or from OneDrive:
           https://dwz.cn/ZPlGA0eJ
-    4. Run the command:
-        docker run -d -P --name STLFRNAME \
-        -v /USER/DB:/stLFR/db -v /USER/DATA:/USER/DATA -v /USER/RESULT:/USER/RESULT \
-        rjunhua/stlfr_reseq_v1.2:v1 /bin/bash /stLFR/bin/stLFR_SGE \
-        /USER/DATA/SAMPLELIST /USER/RSEULT
-    5. Close docker
-        docker rm STLFRNAME
-  
-  Notes:
-  1. Please make sure that you run the docker container with at least 45GB memory and 15 CPU.
-  2. The input is sample list and output directory which descripted below (Main progarm arguments).
+    Notes:
+        1. Please make sure that you run the docker container with at least 45GB memory and 15 CPU.
+        2. The input is sample list and output directory which descripted below (Main progarm arguments).    
+    
+    Running
+    1. Please set the following variables on your machine:
+      (a) $DB_LOCAL: directory on your local machine that has the database files.
+      (b) $DATA_LOCAL: directory on your local machine that has the sequence data and "samplelist" file.
+          "samplelist" must follow the format descripted bellow,
+          and the *PATH* in "samplelist" must be absolute dicrtory of $DATA_LOCAL.
+      (c) $RESULT_LOCAL: direcotry for result.
+    2. Run the command:
+        docker run -d -P \
+        --name $STLFRNAME \
+        -v $DB_LOCAL:/stLFR/db \
+        -v $DATA_LOCAL:$DATA_LOCAL \
+        -v $RESULT_LOCAL:$RESULT_LOCAL \
+        rjunhua/stlfr_reseq_v1.2:v1 \
+        /bin/bash \
+        /stLFR/bin/stLFR_SGE \
+        $DATA_LOCAL/SAMPLELIST \
+        $RESULT_LOCAL
+    5. After report is generated:
+        docker rm $STLFRNAME
 
-Run in local server
+Without Docker but run in local server
 ----------------
 
-Preinstallation
-----------------
-More than 20 softwares/tools are used in this pipeline, and some of them are difficult to build static binary.
-The tools directory descriped below is just an example. So, please make sure these softwares/tools are installed firstly.
-
-      1. software/tool list
-         the directory/path is required for pipeline, * means the software/tool need pre-install
-         tools
-         |--- bam2depth
-              |___ bam2depth
-         |--- bwa
-              |___ bwa
-         |--- circos            * pre-install, some perl-packages are required
-              |___ bin
-                   |___ circos
-         |--- cnv
-         |--- fqcheck
-              |--- convert      * pre-install
-              |--- fqcheck33
-              |--- fqcheck_distribute.pl
-              |--- gnuplot      * pre-install
-              |___ PLOT.pm
-         |---gatk4              * pre-install
-             |___ gatk
-         |---HapCUT2-master
-             |___ utilitie
-                  |--- LinkFragments.py
-                  |___ calculate_haplotype_statistics.py
-         |--- jre
-              |___ bin
-                   |___ java
-         |--- monitor
-              |___ watchDog.pl
-         |--- picard             * pre-install
-              |___ picard.jar
-         |--- Python2            * pre-install
-              |___ python
-         |--- python3            * pre-install
-              |___ python3
-         |--- R                  * pre-install 
-              |___ bin
-                   |___ R
-         |--- rtg-tools
-              |___ rtg
-         |--- samtools
-              |___ bin
-                   |___ samtools
-         |--- SOAPnuke
-              |___ SOAPnuke
-         |--- sv
-         |___ vcftools
-              |--- bcftools
-              |--- bgzip
-              |___ tabix
-              
-      2. some packages are required for software/tool, such as:
-            R:          ggplot2, scales, regioneR, karyoploteR(https://bioconductor.org/packages/release/bioc/html/karyoploteR.html)
+    Download
+    ----------------
+    1.  download main scripts:
+        git clone git@github.com:MGI-tech-bioinformatics/stLFR_V1.2.git
+    2.  download database and unzip into 'db':
+        For China mainland users, please using BGI Cloud Drive link:
+             https://pan.genomics.cn/ucdisk/s/3mmUzy
+        For other region users, please using OneDrive link:
+             https://dwz.cn/UKb9SRWU
+    3.  download tools and unzip into 'tools':
+        For China mainland users, please using BGI Cloud Drive link:
+             https://pan.genomics.cn/ucdisk/s/ErYf6v
+        For other region users, please using OneDrive link:
+             https://dwz.cn/dVkXg7No
+    4.  preinstall tools
+        More than 20 softwares/tools are used in this pipeline, and some of them are difficult to build static binary.
+        The tools directory descriped below is just an example. So, please make sure these softwares/tools are installed firstly.
+        (a). software/tool list
+            bam2depth, bwa, circos, convert(ImageMagick), gnuplot,
+            gatk4, java, picard, python2, python3, R, rtg-tools, samtools
+        (b). some packages are required for software/tool, such as:
+            R:          ggplot2,
+                        karyoploteR(https://bioconductor.org/packages/release/bioc/html/karyoploteR.html)
             Python2:    vcf, pysam, numpy
             Python3:    pysam
 
-Download/Install
+    Running
+    ----------------
+    1. Make sure 'SAMPLELIST' file is in a right format.
+    2. Run script with default parameters:
+         perl bin/stLFR_SGE -l SAMPLELIST -outputdir OUTPUTDIR
+
+Demo data
 ----------------
-Due to the size limitation of GitHub repository, the database directory ('stLFR_V1.2/db') and tools directory ('stLFR_V1.2/tools') are provided below:
-
-      1. tools:
-         
-         For China mainland users, please using BGI Cloud Drive link:
-         https://pan.genomics.cn/ucdisk/s/ErYf6v
-         
-         For other region users, please using OneDrive link:
-         https://dwz.cn/dVkXg7No
-         
-      2. database:
-      
-         For China mainland users, please using BGI Cloud Drive link:
-         https://pan.genomics.cn/ucdisk/s/3mmUzy
-
-         For other region users, please using OneDrive link:
-         https://dwz.cn/UKb9SRWU
-
-Tool list in directory ('stLFR_V1.2/tools'):
-
-      1. download tools from BGI Cloud or OneDrive and check up MD5 values in the related MD5.txt files.
-      2. install some softwares/tools by yourself.
-
-Database:
-
-      1. download database from BGI Cloud or OneDrive.
-      2. check and prepare database follow the 'readme.txt' in BGI Cloud.
-      3. place database follow the 'db.tree.list' in GitHub.
-
-Meanwhile, two demo stLFR libraries are provided for testing, and every library consists two lanes:
-
+    two demo stLFR libraries are provided for testing, and every library consists two lanes:
       1. T0001-2:
             ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0057111/
       2. T0001-4:
             ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0094773/
 
-Usage
+Input: Sample List
 ----------------
-1. Make sure 'SAMPLELIST' file is in a right format.
-2. Run script with default parameters:
+    -list FILE
+         Name of input file. This is required.
 
-         perl bin/stLFR_SGE -l SAMPLELIST -outputdir OUTPUTDIR
-         
+         Five columns in the list file, which the front three columns are required:
+         1. name    : unique sample ID in this analysis
+         2. path    : fastq path(s) for this sample split with colon(:)
+         3. barcode : sample-barcode for each path split with colon(:), 0 means all used
+         4. reffile : reference with index, two inner options are 'hg19' and 'hs37d5', NULL or '-' means 'hs37d5'
+         5. vcffile : dbsnp file, default is NULL or '-'
+         6. blacklist : black list file(BED format) for SV
+         7. controllist : sorted control list file(BEDPE format) for SV
 
-Main progarm arguments:
-----------------
-
-   Sample List
-   
-       -list FILE
-                     Name of input file. This is required.
-
-                     Five columns in the list file, which the front three columns are required:
-                     1. name    : unique sample ID in this analysis
-                     2. path    : fastq path(s) for this sample split with colon(:)
-                     3. barcode : sample-barcode for each path split with colon(:), 0 means all used
-                     4. reffile : reference with index, two inner options are 'hg19' and 'hs37d5', NULL or '-' means 'hs37d5'
-                     5. vcffile : dbsnp file, default is NULL or '-'
-                     6. blacklist : black list file(BED format) for SV
-                     7. controllist : sorted control list file(BEDPE format) for SV
-
-                     eg:  SAM1   /DATA/slide1/L01                    1-4,5,7-9
-                          SAM2   /DATA/slide1/L01:/DATA/slide2/L01   0:1-8         hg19
-                          SAM3   /DATA/slide2/L02                    0             REFERENCE/ref.fa      DBSNP/dbsnp.vcf
-                          SAM4   /DATA/slide2/L03                    0             hs37d5                -                   BLACKLIST    CONTROLLIST
-
-   Output Directory
-   
-       -outputdir [ ./ ]
-                     Output directory path.
-
-   stLFR barcode position
-   
-       -position [ 101_10,117_10,133_10 ]
-                     Position of stLFR barcodes on read2.
-
-   Task Monitor Type
-   
-       -cpu      [ 60 ]
-                     CPU number on server
-
-   Usage
-   
-       -help       Show brief usage synopsis.
-       -man        Show man page.
-       -run        Run workflow after main shells built.
+         eg:  SAM1   /DATA/slide1/L01                    1-4,5,7-9
+              SAM2   /DATA/slide1/L01:/DATA/slide2/L01   0:1-8         hg19
+              SAM3   /DATA/slide2/L02                    0             REFERENCE/ref.fa      DBSNP/dbsnp.vcf
+              SAM4   /DATA/slide2/L03                    0             hs37d5                -                   BLACKLIST    CONTROLLIST
 
 Result
 ----------------
-After all analysis processes ending, you will get these files below:
-
+    After all analysis processes ending, you will get these files below:
       1.  HTML report:                              *_cn.html, *_en.html
       2.  raw data summary:                         *.fastqtable.xls
       3.  stLFR barcode summary:                    *.fragtable.xls
@@ -224,7 +149,6 @@ After all analysis processes ending, you will get these files below:
 Additional Information
 ----------------
 1. If user has "Permission denied" problem in the process of running，you can use the command "chmod +x -R stLFR_v2.1/tools" to get executable permission of tools.
-
 
 License
 ----------------
