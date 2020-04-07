@@ -27,7 +27,7 @@ $linkdist      = 1000000;
 $esphasepl     = "$TOOL_PATH/../bin/stat/eachstat_phase.pl";
 $hkpl          = "$TOOL_PATH/../bin/stat/haplotype.karyotype.pl";
 $R             = "$TOOL_PATH/R/bin";
-$svbin         = "$TOOL_PATH/sv2.0/bin";
+$svbin         = "$TOOL_PATH/sv/tools/gen_phase";
 
 sub phase_ha{
   my (
@@ -69,7 +69,7 @@ sub phase_ha{
     # phase on chromosome
     open SUB,">$shelldir/sub0321.$sample.phase.$fai[0].sh";
     print SUB "
-      export LD_LIBRARY_PATH=$TOOL_PATH/sv2.0/lib:\$LD_LIBRARY_PATH
+      export LD_LIBRARY_PATH=$TOOL_PATH/sv/lib:\$LD_LIBRARY_PATH
 
       $extractHAIRS --10X 1 \\
         --bam $inputdir/$sample.$fai[0].bam \\
