@@ -39,7 +39,7 @@ With Docker
         Or from OneDrive:
           https://dwz.cn/ZPlGA0eJ
     Notes:
-        1. Please make sure that you run the docker container with at least 45GB memory and 15 CPU.
+        1. Please make sure that you run the docker container with at least 45GB memory and 30 CPU.
         2. The input is sample list and output directory which descripted below (Main progarm arguments).    
     
     Running
