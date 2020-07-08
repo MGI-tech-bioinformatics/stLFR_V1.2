@@ -102,9 +102,9 @@ Demo data
 ----------------
     two demo stLFR libraries are provided for testing, and every library consists two lanes:
       1. T0001-2:
-            ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0057111/
+            http://ftp.cngb.org/pub/CNSA/data1/CNP0000387/CNS0057111/
       2. T0001-4:
-            ftp://ftp.cngb.org/pub/CNSA/CNP0000387/CNS0094773/
+            http://ftp.cngb.org/pub/CNSA/data1/CNP0000387/CNS0094773/
 
 Input: Sample List
 ----------------
