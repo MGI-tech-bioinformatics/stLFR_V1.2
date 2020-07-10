@@ -115,8 +115,8 @@ Input: Sample List
          1. name    : unique sample ID in this analysis
          2. path    : fastq path(s) for this sample split with colon(:)
          3. barcode : sample-barcode for each path split with colon(:), 0 means all used
-         4. reffile : reference with index, two inner options are 'hg19' and 'hs37d5', NULL or '-' means 'hs37d5'
-         5. vcffile : dbsnp file, default is NULL or '-'
+         4. reffile : reference with index, two inner options are 'hg19' and 'hs37d5', NULL means 'hs37d5'
+         5. vcffile : dbsnp file, default is NULL
          6. blacklist : black list file(BED format) for SV
          7. controllist : sorted control list file(BEDPE format) for SV
 
