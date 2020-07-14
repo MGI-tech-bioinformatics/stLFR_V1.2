@@ -10,6 +10,9 @@ Download source code package from https://github.com/MGI-tech-bioinformatics/stL
 
 Updates 
 ----------------
+    July 14, 2020
+    1. keep the log and temp results in stLFR Docker.
+    
     Mar 31, 2020
     1. add a Docker version of stLFR V1.2.
     2. fix one BUG occur in SV detection.
@@ -32,7 +35,7 @@ With Docker
     1. Install docker follow the official website
         https://www.docker.com/
     2. Then do the following for the workflow:
-        docker pull rjunhua/stlfr_reseq_v1.2:v1
+        docker pull rjunhua/stlfr_reseq_v1.2:v2
     3. Download and unzip the database
         From BGI Cloud Drive:
           https://pan.genomics.cn/ucdisk/s/Jvmuii
@@ -40,7 +43,8 @@ With Docker
           https://dwz.cn/ZPlGA0eJ
     Notes:
         1. Please make sure that you run the docker container with at least 45GB memory and 30 CPU.
-        2. The input is sample list and output directory which descripted below (Main progarm arguments).    
+        2. The input is sample list and output directory which descripted below (Main progarm arguments).
+        3. The log files and temp results are all left, so the memory must be double-checked.
     
     Running
     1. Please set the following variables on your machine:
@@ -55,7 +59,7 @@ With Docker
         -v $DB_LOCAL:/stLFR/db \
         -v $DATA_LOCAL:$DATA_LOCAL \
         -v $RESULT_LOCAL:$RESULT_LOCAL \
-        rjunhua/stlfr_reseq_v1.2:v1 \
+        rjunhua/stlfr_reseq_v1.2:v2 \
         /bin/bash \
         /stLFR/bin/stLFR_SGE \
         $DATA_LOCAL/samplelist \
